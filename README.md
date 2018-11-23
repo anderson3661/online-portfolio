@@ -1,3 +1,5 @@
+NOTE ... Files of a more personal nature have not been uploaded to this repository and so if cloning or downloading it the application will not work because of these missing files.
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 Below you will find some information on how to perform common tasks.<br>
