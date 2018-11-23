@@ -1,0 +1,113 @@
+.container.about-me {
+  height: 100vh;
+  background-color: white;
+  background: url("../../assets/images/miscellaneous/aboutme.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: bottom;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden; }
+  .container.about-me section.about-me {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%; }
+    .container.about-me section.about-me .inner-container {
+      font-family: "Courgette", cursive;
+      width: 75%;
+      background-color: rgba(119, 157, 189, 0.3);
+      color: white;
+      box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.3);
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      border-radius: 10px;
+      padding: 3vh 3vw;
+      margin-bottom: 20vh;
+      animation-name: fade-in;
+      animation-duration: 1s;
+      animation-timing-function: ease-in; }
+
+@keyframes fade-in {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+      .container.about-me section.about-me .inner-container .image-container {
+        flex-basis: 25%; }
+        .container.about-me section.about-me .inner-container .image-container .image img {
+          height: auto;
+          width: 100%;
+          border-radius: 50%;
+          box-shadow: 0px 0px 5vw black; }
+      .container.about-me section.about-me .inner-container .name, .container.about-me section.about-me .inner-container .jobTitle {
+        display: inline-block;
+        margin: 0; }
+      .container.about-me section.about-me .inner-container .description {
+        flex-basis: 75%;
+        margin-left: 3vw; }
+        .container.about-me section.about-me .inner-container .description p {
+          font-size: 100%; }
+  .container.about-me img.background-image-preload-projects {
+    background: url("../../assets/images/miscellaneous/wall-background.jpg");
+    display: none; }
+  .container.about-me img.background-image-preload-skills {
+    background: url("../../assets/images/miscellaneous/white-table.jpg");
+    display: none; }
+  .container.about-me img.background-image-preload-work-experience {
+    background: url("../../assets/images/miscellaneous/timeline.jpg");
+    display: none; }
+  .container.about-me img.background-image-preload-cv {
+    background: url("../../assets/images/miscellaneous/wall-background-white-bricks.jpg");
+    display: none; }
+
+@media screen and (max-width: 1024px) {
+  .container.about-me {
+    background: url("../../assets/images/miscellaneous/aboutme-1024.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center; }
+    .container.about-me img.background-image-preload-projects {
+      background: url("../../assets/images/miscellaneous/wall-background-1024.jpg");
+      display: none; }
+    .container.about-me img.background-image-preload-skills {
+      background: url("../../assets/images/miscellaneous/white-table-1024.jpg");
+      display: none; }
+    .container.about-me img.background-image-preload-work-experience {
+      background: url("../../assets/images/miscellaneous/timeline-1024.jpg");
+      display: none; }
+    .container.about-me img.background-image-preload-cv {
+      background: url("../../assets/images/miscellaneous/wall-background-white-bricks-1024.jpg");
+      display: none; } }
+
+@media screen and (max-width: 450px) {
+  .container.about-me section.about-me .inner-container .name, .container.about-me section.about-me .inner-container .jobTitle {
+    font-size: 90%; }
+  .container.about-me section.about-me .inner-container .description p {
+    font-size: 90%; } }
+
+@media screen and (max-height: 900px) {
+  .container.about-me {
+    background-position: center; }
+    .container.about-me section.about-me .inner-container {
+      padding: 1vh 3vw;
+      margin-bottom: 30vh; }
+      .container.about-me section.about-me .inner-container .description p {
+        font-size: 90%; } }
+
+@media screen and (max-height: 600px) {
+  .container.about-me section.about-me .inner-container {
+    margin-bottom: 20vh; }
+    .container.about-me section.about-me .inner-container .description p {
+      font-size: 80%; } }
+
+@media screen and (max-height: 400px) {
+  .container.about-me section.about-me .inner-container {
+    margin-bottom: 10vh; }
+    .container.about-me section.about-me .inner-container .description p {
+      font-size: 70%; } }

@@ -1,0 +1,159 @@
+@import '../../sass/variables.scss';
+@import '../../sass/mixins.scss';
+
+
+.container.skills {
+    background-color: $background-color-main-body;
+    width: 100%;
+    height: 100vh;
+    @include backgroundImage($url: $background-image-skills, $position: bottom left);
+    overflow: hidden;
+
+    section.skills {
+        font-family: $font-family-skills;
+
+        .details {
+            position: absolute;
+            padding: 1.5vh 1vw 1vh 1vw;
+            min-height: 35vh;
+            width: calc(35vh * 0.78);
+            min-width: 20vw;
+            @include backgroundImage($url: $background-image-paper);
+            box-shadow: $box-shadow-skills-paper;
+
+            animation-duration: 0.5s;
+            animation-timing-function: ease-in;
+
+            animation-name: scale-up;
+            @keyframes scale-up {
+                0% { transform: scale(0.9, 0.9)}
+                100% { transform: scale(1, 1)}
+            }
+
+            &.react {
+                top: 7vh;
+                left: 5vw;
+
+                transform: rotate(1deg);
+                animation-name: rotate-react;
+                @keyframes rotate-react { 0% { transform: rotate(0deg) } 100% { transform: rotate(1deg) } }
+            }
+
+            &.front-end {
+                top: 13vh;
+                left: 20vw;
+
+                transform: rotate(-3deg);
+                animation-name: rotate-front-end;
+                @keyframes rotate-front-end { 0% { transform: rotate(0deg) } 100% { transform: rotate(-3deg) } }
+            }
+
+            &.back-end {
+                top: 23vh;
+                left: 35vw;
+
+                transform: rotate(2deg);
+                animation-name: rotate-back-end;
+                @keyframes rotate-back-end { 0% { transform: rotate(0deg) } 100% { transform: rotate(2deg) } }
+            }
+
+            &.lotus-notes {
+                top: 55vh;
+                left: 40vw;
+
+                transform: rotate(-5deg);
+                animation-name: rotate-lotus-notes;
+                @keyframes rotate-lotus-notes { 0% { transform: rotate(0deg) } 100% { transform: rotate(-5deg) } }
+            }
+
+            &.sharepoint {
+                top: 61vh;
+                left: 61vw;
+                transform: rotate(0deg);
+                z-index: 2;
+            }
+
+            &.soft-skills {
+                font-size: 90%;
+                top: 15vh;
+                left: 64vw;
+                width: 32vw;
+
+                transform: rotate(-4deg);
+                animation-name: rotate-soft-skills;
+                @keyframes  rotate-soft-skills { 0% { transform: rotate(0deg) } 100% { transform: rotate(-4deg) } }
+            }
+
+            h1 {
+                text-align: center;
+                font-size: 110%;
+                margin: 0;
+
+                animation-name: fade-in;
+                animation-duration: 1s;
+                animation-timing-function: ease-in;
+
+                @keyframes fade-in {
+                    0% { opacity: 0;}
+                    100% { opacity: 1;}
+                }
+            }
+
+            ul {
+                width: 88%;
+                list-style-type: none;
+                padding-left: 1.5vw;
+                
+                li {
+                    font-size: 100%;
+                    display: flex;
+
+                    &:before {
+                        content: '~';
+                        width: 1px;
+                        height: 1px;
+                        margin-right: 1.5vw;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// @media screen and (min-width: 1200px) { .container.skills section.skills .details { h1 { font-size: 150%; } ul li { font-size: 120% } } }
+// @media screen and (max-width: 1200px) { .container.skills section.skills .details { min-height: 28vh; width: calc(28vh * 0.78); h1 { font-size: 140%; } ul li { font-size: 110% } } }
+// @media screen and (max-width: 1024px) { .container.skills section.skills .details { min-height: 25vh; width: calc(25vh * 0.78); &.lotus-notes { left: 45vw; } &.sharepoint { left: 66vw; } h1 { font-size: 130%; } ul li { font-size: 100% } } }
+
+@media screen and (max-width: 1024px) { .container.skills { @include backgroundImage($url: $background-image-skills-1024, $position: bottom left); } }
+@media screen and (max-width: 768px) { .container.skills { background-position: bottom center; } }
+
+@media screen and (max-width: 850px) {
+    .container.skills {
+        overflow: auto;
+        section.skills {
+            display: flex;
+            flex-direction: column;
+            margin-top: 20vh;
+            .details {
+                position: relative;
+                width: 50%;
+                margin: 0 auto 5vh auto;
+
+                &.react, &.front-end, &.back-end, &.lotus-notes, &.sharepoint, &.soft-skills {
+                    top: 0;
+                    left: 20vw;
+                    transform: rotate(0deg);
+                    width: 50%;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-height: 900px) {
+    .container.skills {
+        section.skills {
+            // margin-top: 15vh;
+        }
+    }
+}

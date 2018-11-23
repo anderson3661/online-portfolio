@@ -1,0 +1,155 @@
+@import '../../sass/variables.scss';
+@import '../../sass/mixins.scss';
+
+
+.container.work-experience {
+    background-color: $background-color-main-body;
+    color: $color-we;
+
+    img.full-screen-background-image {
+        @include backgroundImage($url: $background-image-work-experience);
+    }
+
+    section.work-experience {
+        @include flex($align-items: null);
+
+        .paper {
+            font-size: 70%;
+            padding: 1.5vh 1vw 1vh 1vw;
+            box-shadow: $box-shadow-we-paper;
+            @include backgroundImage($url: $background-image-paper);
+            width: 87%;
+            margin-top: 18vh;
+            margin-bottom: 10vh;
+            z-index: 2;
+            @include fade-in(0.25s);
+
+            h1 {
+                text-align: center;
+                margin: 0 0 3vh 0;
+                @include fade-in;
+            }
+        
+            ul {
+                list-style: none;
+                margin: 0 0 0 8vw;
+                padding: 0;
+                position: relative;
+
+                &:before {
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 0;
+                    height: 100%;
+                    border: $border-we-timeline-dotted;        
+                }
+
+                li {
+                    margin: 6vh 3vw;
+                    position: relative;
+                    background-color: $background-color-we-boxes;
+                    border: $border-we-boxes;
+                    padding: 1vh 1vw;
+                    border-radius: 10px;
+                    box-shadow: $box-shadow-we-boxes;
+
+                    &:first-child { margin-top: 1vh; }
+                    &:last-child { margin-bottom: 10vh; }
+
+                    > span {
+                        content: '';
+                        position: absolute;
+                        top: 0;
+                        left: -3.1vw;
+                        height: 100%;
+                        width: 0;
+                        border: $border-we-timeline-main;
+
+                        &:before, &:after {
+                            content: '';
+                            position: absolute;
+                            height: 0.6vw;
+                            width: 0.6vw;
+                            border: $border-we-timeline-main;
+                            border-radius: 50%;
+                            left: -0.45vw;
+                            background-color: $background-color-we-timeline-main;
+                        }
+
+                        &:before { top: -1vh; }
+                        &:after { top: 100%; }
+                    }
+
+                    .dates span {
+                        position: absolute;
+                        left: -10vw;
+                        top: 35%;
+                        width: 7vw;
+                        font-weight: 700;
+                        color: $color-we-dates;
+                    }
+                }
+
+                .job {
+                    display: flex;
+
+                    .role {
+                        flex-basis: 20%;
+                        font-weight: 700;
+                        margin-right: 2vw;
+                    }
+
+                    .company {
+                        flex-basis: 15%;
+                        font-weight: 700;
+                        margin-right: 2vw;
+                    }
+                    
+                    .info {
+                        flex-basis: 65%;
+                        // font-size: 0.9em;
+                        // font-size: 75%;
+
+                        p {
+                            margin: 0;
+                            padding: 0.5vh 0;
+
+                            &:first-child { padding-top: 0; }
+                            &:last-child { padding-bottom: 0; }
+                        }
+
+                        ul {
+                            margin: 0 0 0 1vw;
+                        
+                            &:before, &:after {
+                                height: 0;
+                                border: none;
+                            }
+
+                            li {
+                                border: none;
+                                margin-top: 0;
+                                margin-bottom: 0;
+                                padding: 0;
+                                list-style: initial;
+                                box-shadow: none;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 812px) {
+
+    .container.work-experience {
+        section.work-experience {
+            .paper {
+            }
+        }
+    }
+}

@@ -1,0 +1,188 @@
+// ***************** General ****************
+$font-family-main: Arial, Helvetica, sans-serif;
+$background-color-main-body: white;
+$line-height-main-body: 1.0;
+
+$background-container-card: radial-gradient(ellipse at center, rgb(97, 130, 139) 0%, rgba(74,86,97,1) 100%);
+$color-container-card: white;
+$box-shadow-container-card: 0 0 20px rgba(0, 0, 0, 0.5);
+
+
+// ***************** Images *****************
+$background-image-please-note: url('../../assets/images/miscellaneous/pleasenote.png');
+$background-image-about-me: url('../../assets/images/miscellaneous/aboutme.jpg');
+$background-image-about-me-1024: url('../../assets/images/miscellaneous/aboutme-1024.jpg');
+$background-image-projects: url('../../assets/images/miscellaneous/wall-background.jpg');
+$background-image-projects-1024: url('../../assets/images/miscellaneous/wall-background-1024.jpg');
+$background-image-projects-wallboard: url('../../assets/images/miscellaneous/wallboard.jpg');
+$background-image-projects-view-app: url('../../assets/images/miscellaneous/view-app.png');
+$background-image-projects-view-code: url('../../assets/images/miscellaneous/view-code.png');
+$background-image-projects-laptop: url('../../assets/images/miscellaneous/laptop.png');
+$background-image-skills: url('../../assets/images/miscellaneous/white-table.jpg');
+$background-image-skills-1024: url('../../assets/images/miscellaneous/white-table-1024.jpg');
+$background-image-work-experience: url('../../assets/images/miscellaneous/timeline.jpg');
+$background-image-work-experience-1024: url('../../assets/images/miscellaneous/timeline-1024.jpg');
+$background-image-cv: url('../../assets/images/miscellaneous/wall-background-white-bricks.jpg');
+$background-image-cv-1024: url('../../assets/images/miscellaneous/wall-background-white-bricks-1024.jpg');
+$background-image-paper: url('../../assets/images/miscellaneous/paper-white.jpg');
+
+
+// **************** Opacity *****************
+$opacity-images-body-after: 1.0;
+
+
+// ************************ Links *************************
+$color-link: blue;
+$color-link-sticky-notes: black;
+$color-active-link-sticky-notes: blue;
+$color-link-hover-sticky-notes: slategray;
+
+
+// *********************** HEADER *************************
+$background-color-header-on-scroll: rgba(0,0,0,0.5);
+
+
+// *********************** MINI ME ************************
+$background-color-mini-me: rgba(0,0,0,0.25);
+$color-mini-me: rgb(235, 231, 231);
+
+
+// ******************** STICKY NOTES **********************
+$font-family-sticky-notes: 'Walter Turncoat', cursive;
+
+
+// *********************** ABOUT ME ***********************
+$font-family-about-me: 'Courgette', cursive;
+$background-color-about-me: rgba(119, 157, 189, 0.3);
+$color-about-me: white;
+$box-shadow-about-me: 10px 10px 10px rgba(0, 0, 0, 0.3);
+$box-shadow-about-me-main-image: 0px 0px 5vw rgba(0, 0, 0, 1);
+
+
+// *********************** PROJECTS ***********************
+$color-projects: white;
+// $font-family-projects-wallboard: 'Walter Turncoat', cursive;
+$box-shadow-projects-wallboard: 5px 5px 5px rgba(0, 0, 0, 0.404);
+$background-color-project-images: black;
+$border-projects-view-app-code-hover: 1px solid slategray;
+$border-projects-carousel: 1vw solid white;
+$border-projects-carousel-first-last: 1vw solid gray;
+$border-projects-carousel-hover: 1vw solid red;
+
+
+// ************************ SKILLS ************************
+$font-family-skills: 'Schoolbell', cursive;
+$color-skills: black;
+$box-shadow-skills-paper: 5px 5px 5px rgba(0, 0, 0, 0.25);
+
+
+// ******************* WORK EXPERIENCE ********************
+$color-we: black;
+$box-shadow-we-paper: 5px 5px 5px rgba(0, 0, 0, 0.25);
+$border-we-timeline-dotted: 1px dashed darkgray;
+$background-color-we-timeline-main: yellowgreen;
+$border-we-timeline-main: 2px solid yellowgreen;
+$background-color-we-boxes: white;
+$border-we-boxes: 1px solid lightgrey;
+$box-shadow-we-boxes: 0.5vh 0.5vw 0.5vh lightgray;
+$color-we-dates: slategray;
+
+
+// ************************** CV **************************
+$color-cv: black;
+$box-shadow-cv-paper: 5px 5px 5px rgba(0, 0, 0, 0.25);
+$color-cv-subheadings: rgb(101, 106, 110);
+$color-cv-highlights: palevioletred;
+$color-cv-hr: palevioletred;
+$border-cv-download-button: 2px solid palevioletred;
+$background-color-cv-download-button: rgb(248, 218, 218);
+$background-color-cv-download-button-hover: rgb(218, 167, 167);
+$border-cv-vertical-separator: 1px solid lightgrey;
+
+
+
+
+
+
+
+// ************* Navigation - OLD *************
+// $background-color-main-header: radial-gradient(ellipse at center, rgb(231, 216, 226) 0%, rgb(151, 93, 129) 100%);
+// $background-color-main-nav: #4C4C4C;
+// $background-color-individual-sport: black;
+// $background-color-active-link: black;
+// $background-color-active-sport-link: #FFDF43;
+// $color-main-header: palevioletred;
+// $color-main-nav: white;
+// $color-main-nav-border-bottom: gray;
+// $color-nav-border-right: white;
+// $color-nav-link: white;
+// $color-nav-link-hover: black;
+// $max-width-main-nav: 100%;
+// $font-size-main-nav: 2.5rem;
+
+
+// ******************** Footer - OLD *********************
+// $background-color-main-footer: #4C4C4C;
+// $color-main-footer: white;
+
+
+// ******************** Contact - OLD ********************
+// $background-contact-form: radial-gradient(ellipse at center, rgb(255, 255, 255) 0%, rgb(203, 203, 204) 100%);
+// $color-contact-form: black;
+// $color-contact-form-invalid-message: red;
+
+
+// ************* About This Application - OLD ************
+// $background-about-this-application: radial-gradient(ellipse at center, rgba(112,131,136,1) 0%, rgba(74,86,97,1) 100%);
+// $color-about-this-application: white;
+// $box-shadow-about-this-application: 0 0 20px rgba(0, 0, 0, 0.5);
+
+
+// ********************* Other - OLD *********************
+// $height-viewport-info-container: 87vh;
+// $margin-top-viewport-info-container: 8vh;
+// $top-viewport-info-container: 5vh;
+
+
+// ******************** ABOUT ME - OLD ********************
+// $background-color-about-me-body: black;
+// $color-about-me: white;
+
+
+// ******************** PROJECTS - OLD ********************
+// $background-color-projects-body: snow;
+// $color-projects: black;
+
+
+// ********************* SKILLS - OLD *********************
+// $background-color-skills-body: snow;
+// $background-color-skills-container: white;
+// $box-shadow-skills-container: 0 0 1vw rgba(0, 0, 0, 0.5);
+// $background-color-skills-container-header: aliceblue;
+// $border-bottom-skills-container-header: 1px solid gray;
+// $color-skills: black;
+// $color-skills-container: black;
+
+
+// **************** WORK EXPERIENCE - OLD *****************
+// $background-color-we-body: snow;
+// $color-we: black;
+// $border-we-timeline-dotted: 1px dashed darkgray;
+// $background-color-we-timeline-main: yellowgreen;
+// $border-we-timeline-main: 2px solid yellowgreen;
+// $background-color-we-boxes: white;
+// $border-we-boxes: 1px solid lightgrey;
+// $box-shadow-we-boxes: 0.5vh 0.5vw 0.5vh lightgray;
+// $color-we-dates: slategray;
+
+
+// *********************** CV - OLD ***********************
+// $background-color-cv-body: snow;
+// $color-cv: black;
+// $color-cv-subheadings: rgb(101, 106, 110);
+// $color-cv-highlights: palevioletred;
+// $color-cv-hr: palevioletred;
+// $border-cv-download-button: 2px solid palevioletred;
+// $background-color-cv-download-button: rgb(248, 218, 218);
+// $background-color-cv-download-button-hover: rgb(218, 167, 167);
+// $border-cv-vertical-separator: 1px solid lightgrey;

@@ -1,0 +1,33 @@
+@import '../../sass/variables.scss';
+
+
+nav.header {
+    z-index: 9999;
+    position: fixed;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+
+    &.displayBackground {
+        background-color: $background-color-header-on-scroll;
+
+        animation-name: fade-in;
+        animation-duration: 0.5s;
+        animation-timing-function: ease-in;
+
+        @keyframes fade-in {
+            0% { opacity: 0;}
+            100% { opacity: 1;}
+        }
+    }
+
+    .mini-me {
+        flex-basis: 20%;
+    }
+    
+    .sticky-notes {
+        flex-basis: 80%;
+        display: flex;
+        justify-content: flex-end;
+    }
+}

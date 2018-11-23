@@ -1,0 +1,240 @@
+@import '../../sass/variables.scss';
+@import '../../sass/mixins.scss';
+
+
+.container.projects {
+    background-color: $background-color-main-body;
+    color: $color-projects;
+    height: 100vh;
+    @include backgroundImage($url: $background-image-projects, $position: bottom);
+    overflow: hidden;
+
+    .projects {
+        
+        section.wallboard {
+            z-index: 4;
+            position: absolute;
+            top: 12vh;
+            left: 4vw;
+            height: 30vh;
+            width: 30vw;
+            // @include backgroundImage($url: $background-image-projects-wallboard);
+            box-shadow: $box-shadow-projects-wallboard;
+            @include fade-in(0.25s);
+
+            img {
+                object-fit: fill;
+                height: 100%;
+                width: 100%;
+            }
+
+            .info {
+                box-sizing: border-box;
+                position: absolute;
+                top: 0;
+                left: 0;
+                height: 100%;
+                width: 100%;
+                overflow: hidden;
+                @include flex($align-items: null, $flex-direction: column);
+
+                .project-header { flex-basis: 10%; }
+                .project-body { flex: 1 }
+                .project-footer { flex-basis: 25%; }
+
+                .project-header {
+                    @include flex($justify-content: null);
+                    margin: 2.5vh 0 0 0;
+                    padding: 0 0.5vw;
+
+                    button.project {
+                        background-color: transparent;
+                        outline: none;
+                        width: 0;
+                        height: 0; 
+                        border-top: 1vw solid transparent;
+                        border-bottom: 1vw solid transparent;
+                        cursor: pointer;
+                    }
+
+                    h2 {
+                        font-size: 1.5vw;
+                        margin: 0 1vw;
+                        flex: 1;
+                        text-align: center;
+                    }
+                }
+
+                .project-body {
+                    @include flex($justify-content: null);
+                    padding: 0 2.5vw 0 2.5vw;
+
+                    p {
+                        font-size: 1.1vw;
+                        margin: 1vh 0 1vh 0;
+                    }
+                }
+    
+                .project-footer {
+                    @include flex($justify-content: space-between);
+                    margin-bottom: 3vh;
+                    padding: 0 2.5vw 0 2.5vw;
+
+                    .skills {
+                    
+                        .skill {
+                            display: flex;
+                            align-items: baseline;
+
+                            span {
+                                font-size: 1.2vw;
+                                margin-right: 1vw;
+                            }
+
+                            .tick {
+                                -ms-transform: scaleX(-1) rotate(-35deg); /* IE 9 */
+                                -webkit-transform: scaleX(-1) rotate(-35deg); /* Chrome, Safari, Opera */
+                                transform: scaleX(-1) rotate(-35deg);
+                                font-size: 1.8vw;
+                                height: 3vh;
+                            }
+                        }
+                    }
+        
+                    .buttons {
+                        margin-right: 0.5vw;
+                        @include flex($align-items: null, $flex-direction: column);
+        
+                        a {
+                            height: 4vh;
+                            width: 9vw;
+                            display: flex;
+
+                            .button {
+                                width: 95%;             // This gives it the scale effect
+                                border: 1px solid transparent;
+
+                                &.view-app {
+                                    @include backgroundImage($url: $background-image-projects-view-app, $size: contain);
+                                }
+
+                                &.view-code {
+                                    @include backgroundImage($url: $background-image-projects-view-code, $size: contain);
+                                }
+                            }
+                        }
+                        
+                        .button.view-app:hover, .button.view-code:hover {
+                            padding: 0 1vw;             // This gives it the scale effect
+                            border: $border-projects-view-app-code-hover;
+                        }
+
+                    }
+                }
+            }
+        }
+
+        section.project-images {
+            position: absolute;
+            left: 37vw;
+            bottom: 0;
+            height: 65vh;
+            width: 63vw;
+            @include backgroundImage($url: $background-image-projects-laptop);
+            background-size: 100% 100%;
+            @include fade-in(0.25s);
+
+            .project-image-background {
+                background-color: $background-color-project-images;
+                position: absolute;
+                top: 3vh;
+                left: 5vw;
+                height: 68%;
+                width: 76%;
+            }
+
+            .project-image-carousel {
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-position: top left;
+                position: absolute;
+                top: 4vh;
+                left: 6vw;
+                height: 66%;
+                width: 73%;
+                margin: 0 auto;
+                border-radius: 5px;
+            }
+
+            button.project-image {
+                position: absolute;
+                top: 25vh;
+                background-color: transparent;
+                outline: none;
+                width: 0;
+                height: 0; 
+                border-top: 1vw solid transparent;
+                border-bottom: 1vw solid transparent;
+                cursor: pointer;
+                z-index: 2;
+                
+                &.previous { left: 2.6vw; }
+                &.next { left: 52.7vw; }
+            }
+        }
+
+        button.project.previous, button.project-image.previous {
+            border-left: 1vw solid transparent;
+            border-right: $border-projects-carousel;
+
+            &:hover {
+                border-right: $border-projects-carousel-hover;
+            }
+
+            &.first {
+                cursor: initial;
+                border-right: $border-projects-carousel-first-last;
+            }
+        }
+
+        button.project.next, button.project-image.next {
+            border-left: $border-projects-carousel;
+            border-right: 1vw solid transparent;
+
+            &:hover {
+                border-left: $border-projects-carousel-hover;
+            }
+
+            &.last {
+                cursor: initial;
+                border-left: $border-projects-carousel-first-last;
+            }
+        }
+
+        span.download-help1, span.download-help2, span.download-help3, span.download-help4 {
+            z-index: 5;
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            height: 5vh;
+            width: 8vw;
+            @include fade-out(2s);
+            @include backgroundImage($url: $background-image-please-note, $size: contain);
+        }
+
+        span.download-help1 { top: 16vh; left: 7.5vw; }
+        span.download-help2 { top: 14.5vh; left: 32vw; }
+        span.download-help3 { top: 60vh; left: 43vw; }
+        span.download-help4 { top: 60vh; left: 91vw; }
+        
+    }
+}
+
+
+@media screen and (max-width: 1024px) {
+
+    .container.projects {
+        background: $background-image-projects-1024;
+    }
+
+}

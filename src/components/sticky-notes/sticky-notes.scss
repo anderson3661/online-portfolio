@@ -1,0 +1,28 @@
+@import '../../sass/variables.scss';
+@import '../../sass/mixins.scss';
+
+
+section.sticky-notes {
+    margin: 0.5vh 0.5vw 0 0;
+
+    a.nav-link {
+        flex-basis: 10%;
+
+        &.active-link { background-color: rgba(255,255,255,0.6); border-radius: 10px; }
+    }
+
+    .image {
+        flex-basis: 10%;
+        margin: 0.25vh 0.25vw;
+
+        img {
+            height: auto;
+            width: 100%;
+        }
+
+        &:hover {
+            background-color: rgba(255,255,255,0.5);
+            border-radius: 10px;
+        }
+    }
+}

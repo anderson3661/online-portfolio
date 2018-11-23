@@ -1,0 +1,146 @@
+.container.skills {
+  background-color: white;
+  width: 100%;
+  height: 100vh;
+  background: url("../../assets/images/miscellaneous/white-table.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: bottom left;
+  overflow: hidden; }
+  .container.skills section.skills {
+    font-family: "Schoolbell", cursive; }
+    .container.skills section.skills .details {
+      position: absolute;
+      padding: 1.5vh 1vw 1vh 1vw;
+      min-height: 35vh;
+      width: calc(35vh * 0.78);
+      min-width: 20vw;
+      background: url("../../assets/images/miscellaneous/paper-white.jpg");
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.25);
+      animation-duration: 0.5s;
+      animation-timing-function: ease-in;
+      animation-name: scale-up; }
+
+@keyframes scale-up {
+  0% {
+    transform: scale(0.9, 0.9); }
+  100% {
+    transform: scale(1, 1); } }
+      .container.skills section.skills .details.react {
+        top: 7vh;
+        left: 5vw;
+        transform: rotate(1deg);
+        animation-name: rotate-react; }
+
+@keyframes rotate-react {
+  0% {
+    transform: rotate(0deg); }
+  100% {
+    transform: rotate(1deg); } }
+      .container.skills section.skills .details.front-end {
+        top: 13vh;
+        left: 20vw;
+        transform: rotate(-3deg);
+        animation-name: rotate-front-end; }
+
+@keyframes rotate-front-end {
+  0% {
+    transform: rotate(0deg); }
+  100% {
+    transform: rotate(-3deg); } }
+      .container.skills section.skills .details.back-end {
+        top: 23vh;
+        left: 35vw;
+        transform: rotate(2deg);
+        animation-name: rotate-back-end; }
+
+@keyframes rotate-back-end {
+  0% {
+    transform: rotate(0deg); }
+  100% {
+    transform: rotate(2deg); } }
+      .container.skills section.skills .details.lotus-notes {
+        top: 55vh;
+        left: 40vw;
+        transform: rotate(-5deg);
+        animation-name: rotate-lotus-notes; }
+
+@keyframes rotate-lotus-notes {
+  0% {
+    transform: rotate(0deg); }
+  100% {
+    transform: rotate(-5deg); } }
+      .container.skills section.skills .details.sharepoint {
+        top: 61vh;
+        left: 61vw;
+        transform: rotate(0deg);
+        z-index: 2; }
+      .container.skills section.skills .details.soft-skills {
+        font-size: 90%;
+        top: 15vh;
+        left: 64vw;
+        width: 32vw;
+        transform: rotate(-4deg);
+        animation-name: rotate-soft-skills; }
+
+@keyframes rotate-soft-skills {
+  0% {
+    transform: rotate(0deg); }
+  100% {
+    transform: rotate(-4deg); } }
+      .container.skills section.skills .details h1 {
+        text-align: center;
+        font-size: 110%;
+        margin: 0;
+        animation-name: fade-in;
+        animation-duration: 1s;
+        animation-timing-function: ease-in; }
+
+@keyframes fade-in {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+      .container.skills section.skills .details ul {
+        width: 88%;
+        list-style-type: none;
+        padding-left: 1.5vw; }
+        .container.skills section.skills .details ul li {
+          font-size: 100%;
+          display: flex; }
+          .container.skills section.skills .details ul li:before {
+            content: '~';
+            width: 1px;
+            height: 1px;
+            margin-right: 1.5vw; }
+
+@media screen and (max-width: 1024px) {
+  .container.skills {
+    background: url("../../assets/images/miscellaneous/white-table-1024.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: bottom left; } }
+
+@media screen and (max-width: 768px) {
+  .container.skills {
+    background-position: bottom center; } }
+
+@media screen and (max-width: 850px) {
+  .container.skills {
+    overflow: auto; }
+    .container.skills section.skills {
+      display: flex;
+      flex-direction: column;
+      margin-top: 20vh; }
+      .container.skills section.skills .details {
+        position: relative;
+        width: 50%;
+        margin: 0 auto 5vh auto; }
+        .container.skills section.skills .details.react, .container.skills section.skills .details.front-end, .container.skills section.skills .details.back-end, .container.skills section.skills .details.lotus-notes, .container.skills section.skills .details.sharepoint, .container.skills section.skills .details.soft-skills {
+          top: 0;
+          left: 20vw;
+          transform: rotate(0deg);
+          width: 50%; } }

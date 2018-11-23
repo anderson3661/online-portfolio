@@ -1,0 +1,225 @@
+.container.projects {
+  background-color: white;
+  color: white;
+  height: 100vh;
+  background: url("../../assets/images/miscellaneous/wall-background.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: bottom;
+  overflow: hidden; }
+  .container.projects .projects section.wallboard {
+    z-index: 4;
+    position: absolute;
+    top: 12vh;
+    left: 4vw;
+    height: 30vh;
+    width: 30vw;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.404);
+    animation-name: fade-in;
+    animation-duration: 0.25s;
+    animation-timing-function: ease-in; }
+
+@keyframes fade-in {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+    .container.projects .projects section.wallboard img {
+      object-fit: fill;
+      height: 100%;
+      width: 100%; }
+    .container.projects .projects section.wallboard .info {
+      box-sizing: border-box;
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      justify-content: center; }
+      .container.projects .projects section.wallboard .info .project-header {
+        flex-basis: 10%; }
+      .container.projects .projects section.wallboard .info .project-body {
+        flex: 1; }
+      .container.projects .projects section.wallboard .info .project-footer {
+        flex-basis: 25%; }
+      .container.projects .projects section.wallboard .info .project-header {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin: 2.5vh 0 0 0;
+        padding: 0 0.5vw; }
+        .container.projects .projects section.wallboard .info .project-header button.project {
+          background-color: transparent;
+          outline: none;
+          width: 0;
+          height: 0;
+          border-top: 1vw solid transparent;
+          border-bottom: 1vw solid transparent;
+          cursor: pointer; }
+        .container.projects .projects section.wallboard .info .project-header h2 {
+          font-size: 1.5vw;
+          margin: 0 1vw;
+          flex: 1;
+          text-align: center; }
+      .container.projects .projects section.wallboard .info .project-body {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        padding: 0 2.5vw 0 2.5vw; }
+        .container.projects .projects section.wallboard .info .project-body p {
+          font-size: 1.1vw;
+          margin: 1vh 0 1vh 0; }
+      .container.projects .projects section.wallboard .info .project-footer {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 3vh;
+        padding: 0 2.5vw 0 2.5vw; }
+        .container.projects .projects section.wallboard .info .project-footer .skills .skill {
+          display: flex;
+          align-items: baseline; }
+          .container.projects .projects section.wallboard .info .project-footer .skills .skill span {
+            font-size: 1.2vw;
+            margin-right: 1vw; }
+          .container.projects .projects section.wallboard .info .project-footer .skills .skill .tick {
+            -ms-transform: scaleX(-1) rotate(-35deg);
+            /* IE 9 */
+            -webkit-transform: scaleX(-1) rotate(-35deg);
+            /* Chrome, Safari, Opera */
+            transform: scaleX(-1) rotate(-35deg);
+            font-size: 1.8vw;
+            height: 3vh; }
+        .container.projects .projects section.wallboard .info .project-footer .buttons {
+          margin-right: 0.5vw;
+          display: flex;
+          flex-direction: column;
+          justify-content: center; }
+          .container.projects .projects section.wallboard .info .project-footer .buttons a {
+            height: 4vh;
+            width: 9vw;
+            display: flex; }
+            .container.projects .projects section.wallboard .info .project-footer .buttons a .button {
+              width: 95%;
+              border: 1px solid transparent; }
+              .container.projects .projects section.wallboard .info .project-footer .buttons a .button.view-app {
+                background: url("../../assets/images/miscellaneous/view-app.png");
+                background-size: contain;
+                background-repeat: no-repeat;
+                background-position: center; }
+              .container.projects .projects section.wallboard .info .project-footer .buttons a .button.view-code {
+                background: url("../../assets/images/miscellaneous/view-code.png");
+                background-size: contain;
+                background-repeat: no-repeat;
+                background-position: center; }
+          .container.projects .projects section.wallboard .info .project-footer .buttons .button.view-app:hover, .container.projects .projects section.wallboard .info .project-footer .buttons .button.view-code:hover {
+            padding: 0 1vw;
+            border: 1px solid slategray; }
+  .container.projects .projects section.project-images {
+    position: absolute;
+    left: 37vw;
+    bottom: 0;
+    height: 65vh;
+    width: 63vw;
+    background: url("../../assets/images/miscellaneous/laptop.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% 100%;
+    animation-name: fade-in;
+    animation-duration: 0.25s;
+    animation-timing-function: ease-in; }
+
+@keyframes fade-in {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+    .container.projects .projects section.project-images .project-image-background {
+      background-color: black;
+      position: absolute;
+      top: 3vh;
+      left: 5vw;
+      height: 68%;
+      width: 76%; }
+    .container.projects .projects section.project-images .project-image-carousel {
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: top left;
+      position: absolute;
+      top: 4vh;
+      left: 6vw;
+      height: 66%;
+      width: 73%;
+      margin: 0 auto;
+      border-radius: 5px; }
+    .container.projects .projects section.project-images button.project-image {
+      position: absolute;
+      top: 25vh;
+      background-color: transparent;
+      outline: none;
+      width: 0;
+      height: 0;
+      border-top: 1vw solid transparent;
+      border-bottom: 1vw solid transparent;
+      cursor: pointer;
+      z-index: 2; }
+      .container.projects .projects section.project-images button.project-image.previous {
+        left: 2.6vw; }
+      .container.projects .projects section.project-images button.project-image.next {
+        left: 52.7vw; }
+  .container.projects .projects button.project.previous, .container.projects .projects button.project-image.previous {
+    border-left: 1vw solid transparent;
+    border-right: 1vw solid white; }
+    .container.projects .projects button.project.previous:hover, .container.projects .projects button.project-image.previous:hover {
+      border-right: 1vw solid red; }
+    .container.projects .projects button.project.previous.first, .container.projects .projects button.project-image.previous.first {
+      cursor: initial;
+      border-right: 1vw solid gray; }
+  .container.projects .projects button.project.next, .container.projects .projects button.project-image.next {
+    border-left: 1vw solid white;
+    border-right: 1vw solid transparent; }
+    .container.projects .projects button.project.next:hover, .container.projects .projects button.project-image.next:hover {
+      border-left: 1vw solid red; }
+    .container.projects .projects button.project.next.last, .container.projects .projects button.project-image.next.last {
+      cursor: initial;
+      border-left: 1vw solid gray; }
+  .container.projects .projects span.download-help1, .container.projects .projects span.download-help2, .container.projects .projects span.download-help3, .container.projects .projects span.download-help4 {
+    z-index: 5;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    height: 5vh;
+    width: 8vw;
+    animation-name: fade-out;
+    animation-duration: 2s;
+    animation-timing-function: ease-in;
+    background: url("../../assets/images/miscellaneous/pleasenote.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center; }
+
+@keyframes fade-out {
+  0% {
+    opacity: 1; }
+  100% {
+    opacity: 0; } }
+  .container.projects .projects span.download-help1 {
+    top: 16vh;
+    left: 7.5vw; }
+  .container.projects .projects span.download-help2 {
+    top: 14.5vh;
+    left: 32vw; }
+  .container.projects .projects span.download-help3 {
+    top: 60vh;
+    left: 43vw; }
+  .container.projects .projects span.download-help4 {
+    top: 60vh;
+    left: 91vw; }
+
+@media screen and (max-width: 1024px) {
+  .container.projects {
+    background: url("../../assets/images/miscellaneous/wall-background-1024.jpg"); } }
