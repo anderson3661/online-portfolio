@@ -27,7 +27,7 @@ yarn-error.log*
 /src/assets/images/not-used
 /src/assets/images/projects
 
-/src/assets/images/miscellaneous/profile.about-me.jpg
-/src/assets/images/miscellaneous/profile.mini-me.jpg
+/src/assets/images/miscellaneous/profile-about-me.jpg
+/src/assets/images/miscellaneous/profile-mini-me.jpg
 
 /src/components/not-used

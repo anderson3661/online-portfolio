@@ -2,7 +2,7 @@ import React, { Fragment } from 'react';
 
 import Header from '../nav/header';
 
-import { PROFILE_IMAGE, BACKGROUND_IMAGE_PROJECTS, BACKGROUND_IMAGE_SKILLS, BACKGROUND_IMAGE_WORK_EXPERIENCE, BACKGROUND_IMAGE_CV } from '../../utilities/constants';
+import { PROFILE_IMAGE } from '../../utilities/constants';
 import { dataTextContent } from '../../utilities/constants-text-content';
 
 import './about-me.css';
