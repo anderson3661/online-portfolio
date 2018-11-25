@@ -4,7 +4,7 @@ import ReactHtmlParser from 'react-html-parser';
 import Header from '../nav/header';
 import { dataTextContent } from '../../utilities/constants-text-content';
 
-import './work-experience.css';
+import './work-experience.scss';
 
 
 export default props => (

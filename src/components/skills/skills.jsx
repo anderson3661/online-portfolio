@@ -3,7 +3,7 @@ import React, { Component, Fragment  } from 'react';
 import Header from '../nav/header';
 import { dataTextContent } from '../../utilities/constants-text-content';
 
-import './skills.css';
+import './skills.scss';
 
 
 export default class Skills extends Component {

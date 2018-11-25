@@ -1,7 +1,8 @@
 import React from 'react';
 
-import './training.css';
 import { dataTextContent } from '../../utilities/constants-text-content';
+
+import './training.scss';
 
 
 export default props => (

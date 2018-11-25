@@ -3,7 +3,7 @@ import { NavLink } from 'react-router-dom';
 
 import { STICKY_NOTE_ABOUT_ME, STICKY_NOTE_PROJECTS, STICKY_NOTE_SKILLS, STICKY_NOTE_CONSTANTS, STICKY_NOTE_CV } from '../../utilities/constants';
 
-import './sticky-notes.css';
+import './sticky-notes.scss';
 
 export default class StickyNotes extends Component {
 

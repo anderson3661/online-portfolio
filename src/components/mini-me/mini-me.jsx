@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 import { PROFILE_IMAGE_MINI_ME } from '../../utilities/constants';
 import { dataTextContent } from '../../utilities/constants-text-content';
 
-import './mini-me.css';
+import './mini-me.scss';
 
 
 export default class MiniMe extends Component {

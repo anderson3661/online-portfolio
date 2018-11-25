@@ -1,6 +1,6 @@
 import React from 'react';
 
-import './projects.css';
+import './projects.scss';
 
 
 export default props => {

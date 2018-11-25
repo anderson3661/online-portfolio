@@ -9,7 +9,7 @@ import Training from '../training/training';
 import { dataTextContent } from '../../utilities/constants-text-content';
 import { CV_HREF_DOWNLOAD, CV_HREF_EMAIL, CV_HREF_LINKEDIN, CV_HREF_CV, CV_TEXT_EMAIL, CV_TEXT_LINKEDIN, CV_TEXT_CV, CV_IMAGE_EMAIL, CV_IMAGE_LINKEDIN, CV_IMAGE_GITHUB } from '../../utilities/constants';
 
-import './cv.css';
+import './cv.scss';
 
 
 export default class CV extends Component {

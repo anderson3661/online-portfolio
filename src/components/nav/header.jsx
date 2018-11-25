@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 import MiniMe from '../mini-me/mini-me';
 import StickyNotes from '../sticky-notes/sticky-notes';
 
-import './header.css';
+import './header.scss';
 
 
 export default class Header extends Component {

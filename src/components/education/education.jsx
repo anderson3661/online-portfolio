@@ -2,7 +2,7 @@ import React from 'react';
 
 import { dataTextContent } from '../../utilities/constants-text-content';
 
-import './education.css';
+import './education.scss';
 
 
 export default props => (

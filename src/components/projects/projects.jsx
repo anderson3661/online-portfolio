@@ -5,7 +5,7 @@ import Project from './project';
 
 import { PROJECT_DATA, WALLBOARD_IMAGE_PROJECTS } from '../../utilities/constants';
 
-import './projects.css';
+import './projects.scss';
 
 
 export default class Projects extends Component {

@@ -5,7 +5,7 @@ import Header from '../nav/header';
 import { PROFILE_IMAGE } from '../../utilities/constants';
 import { dataTextContent } from '../../utilities/constants-text-content';
 
-import './about-me.css';
+import './about-me.scss';
 
 
 export default props => (
