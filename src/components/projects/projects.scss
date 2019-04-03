@@ -56,7 +56,7 @@
                         border-top: 1vw solid transparent;
                         border-bottom: 1vw solid transparent;
                         cursor: pointer;
-                        z-index: 99999;
+                        z-index: 99999;         // Needs to be above the header
                     }
 
                     h2 {
