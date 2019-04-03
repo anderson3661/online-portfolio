@@ -14,7 +14,7 @@
         section.wallboard {
             z-index: 4;
             position: absolute;
-            top: 12vh;
+            top: 14vh;
             left: 4vw;
             height: 30vh;
             width: 30vw;
@@ -55,6 +55,7 @@
                         border-top: 1vw solid transparent;
                         border-bottom: 1vw solid transparent;
                         cursor: pointer;
+                        z-index: 99999;
                     }
 
                     h2 {
