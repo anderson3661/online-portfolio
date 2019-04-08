@@ -23,10 +23,12 @@ export default props => (
                             <img src={PROFILE_IMAGE} alt="" />
                         </div>
                     </div>
-                    <div className="description">
+                    <div className="heading">
                         <h1 className="name">{dataTextContent.general.name}</h1>
                         <span>&nbsp;-&nbsp;</span>
                         <h3 className="jobTitle">{dataTextContent.general.jobTitle}</h3>
+                    </div>
+                    <div className="description">
                         {dataTextContent.aboutme.description.map((content, i) => <p key={i}>{content}</p>)}
                     </div>
                 </div>

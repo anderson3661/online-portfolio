@@ -6,15 +6,25 @@ import './projects.scss';
 export default props => {
 
     let { projectTitle, description, app, code, tools } = props.project;
-    let { isFirstProject, isLastProject, handleNextProject, handlePreviousProject } = props;
+    let { isFirstProject, isLastProject, handleNextProject, handlePreviousProject, displayDownloadHelp } = props;
 
     return (
         <div className="info">
 
             <div className="project-header">
-                <button className={`project previous ${isFirstProject ? "first" : ""}`} onClick={handlePreviousProject}></button>
+
+                <div className="project previous">
+                    <button className={`${isFirstProject ? "first" : ""}`} onClick={handlePreviousProject}></button>
+                    {displayDownloadHelp && <span className="download-help1"></span>}
+                </div>
+
                 <h2>{projectTitle}</h2>
-                <button className={`project next ${isLastProject ? "last" : ""}`} onClick={handleNextProject}></button>
+
+                <div className="project next">
+                    <button className={`${isLastProject ? "last" : ""}`} onClick={handleNextProject}></button>
+                    {displayDownloadHelp && <span className="download-help2"></span>}
+                </div>
+
             </div>
 
             <div className="project-body">
@@ -37,12 +47,10 @@ export default props => {
                 <div className="buttons">
 
                     <div><a href={app} target="_blank" rel="noopener noreferrer">
-                        {/* <img className="button view-app" src={require("../../assets/images/miscellaneous/view-app.png")} alt=""></img> */}
                         <div className="button view-app"></div>
                     </a></div>
 
                     <div><a href={code} target="_blank" rel="noopener noreferrer">
-                        {/* <img className="button view-code" src={require("../../assets/images/miscellaneous/view-code.png")} alt=""></img> */}
                         <div className="button view-code"></div>
                     </a></div>
 

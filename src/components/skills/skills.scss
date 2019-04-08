@@ -110,9 +110,9 @@
 
                     &:before {
                         content: '~';
-                        width: 1px;
+                        width: 18px;
                         height: 1px;
-                        margin-right: 1.5vw;
+                        // margin-right: 1.5vw;
                     }
                 }
             }
@@ -133,27 +133,23 @@
         section.skills {
             display: flex;
             flex-direction: column;
-            margin-top: 20vh;
+            margin-top: 12vh;
             .details {
                 position: relative;
-                width: 50%;
-                margin: 0 auto 5vh auto;
-
+                margin: 0 auto 3vh auto;
+                min-height: unset;
+                
                 &.react, &.front-end, &.back-end, &.lotus-notes, &.sharepoint, &.soft-skills {
+                    width: 60%;
                     top: 0;
-                    left: 20vw;
+                    left: 0;
                     transform: rotate(0deg);
-                    width: 50%;
                 }
             }
         }
     }
 }
 
-@media screen and (max-height: 900px) {
-    .container.skills {
-        section.skills {
-            // margin-top: 15vh;
-        }
-    }
+@media screen and (max-width: 550px) {
+    .container.skills { section.skills { .details { &.react, &.front-end, &.back-end, &.lotus-notes, &.sharepoint, &.soft-skills { width: 75%; } } } }
 }

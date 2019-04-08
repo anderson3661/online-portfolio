@@ -13,7 +13,7 @@ export default class Projects extends Component {
     state = {
         projectCounter: 0,
         projectImageCounter: 0,
-        displayDownloadHelp: true
+        displayDownloadHelp: true,
     }
 
     handlePreviousProject = () => {
@@ -51,9 +51,7 @@ export default class Projects extends Component {
     }
 
     componentDidMount() {
-        // console.log("height", window.screen.height);
-        // console.log("width", window.screen.width);
-        this.interval = setTimeout(() => this.setState({displayDownloadHelp: false}), 2000)
+        this.interval = setTimeout(() => this.setState({displayDownloadHelp: false}), 2000);
     }
 
     componentWillUnmount() {
@@ -63,7 +61,7 @@ export default class Projects extends Component {
 
     render() {
 
-        const { projectCounter, projectImageCounter } = this.state;
+        const { projectCounter, projectImageCounter, displayDownloadHelp } = this.state;
         const project = PROJECT_DATA[projectCounter];
 
         return(
@@ -88,21 +86,24 @@ export default class Projects extends Component {
                                     isLastProject={projectCounter + 1 === PROJECT_DATA.length}
                                     handleNextProject = {this.handleNextProject}
                                     handlePreviousProject = {this.handlePreviousProject}
+                                    displayDownloadHelp={displayDownloadHelp}
                                 />
 
                             </section>
 
                             <section className="project-images">
-                                <button className={`project-image previous ${projectImageCounter === 0 ? "first" : ""}`} onClick={this.handlePreviousProjectImage}></button>
-                                <div className="project-image-background"></div>
-                                <div style={this.getImageStyle()} className="project-image-carousel"></div>
-                                <button className={`project-image next ${projectImageCounter + 1 === project.images.length ? "last" : ""}`} onClick={this.handleNextProjectImage}></button>
-                            </section>
+                                <div className="project-image previous">
+                                    <button className={`${projectImageCounter === 0 ? "first" : ""}`} onClick={this.handlePreviousProjectImage}></button>
+                                    {displayDownloadHelp && <span className="download-help3"></span>}
+                                </div>
 
-                            {this.state.displayDownloadHelp && <span className="download-help1"></span>}
-                            {this.state.displayDownloadHelp && <span className="download-help2"></span>}
-                            {this.state.displayDownloadHelp && <span className="download-help3"></span>}
-                            {this.state.displayDownloadHelp && <span className="download-help4"></span>}
+                                <div style={this.getImageStyle()} className="project-image-carousel"></div>
+
+                                <div className="project-image next">
+                                    <button className={`${projectImageCounter + 1 === project.images.length ? "last" : ""}`} onClick={this.handleNextProjectImage}></button>
+                                    {displayDownloadHelp && <span className="download-help4"></span>}
+                                </div>
+                            </section>
 
                         </div>            
 

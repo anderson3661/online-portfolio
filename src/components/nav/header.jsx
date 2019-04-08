@@ -17,14 +17,17 @@ export default class Header extends Component {
     }
 
     componentDidMount() {
+        debugger;
         window.addEventListener('scroll', this.handleScroll);
     }
 
     componentWillUnmount() {
+        debugger;
         window.removeEventListener('scroll', this.handleScroll);
     }
 
     handleScroll(e) {
+        debugger;
         if (window.pageYOffset > 50 & !this.state.displayBackground) {
             this.setState({displayBackground: true});
         } else if (window.pageYOffset <= 50 & this.state.displayBackground) {
@@ -33,6 +36,7 @@ export default class Header extends Component {
     }
 
     render() {
+        debugger;
 
         return(
 
