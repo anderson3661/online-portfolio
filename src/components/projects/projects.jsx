@@ -3,7 +3,8 @@ import React, { Component, Fragment  } from 'react';
 import Header from '../nav/header';
 import Project from './project';
 
-import { PROJECT_DATA, WALLBOARD_IMAGE_PROJECTS } from '../../utilities/constants';
+import { PROJECT_DATA, WALLBOARD_IMAGE_PROJECTS, PROJECT_LOAD_DELAY_MESSAGE } from '../../utilities/constants-projects';
+import ConfirmationDialog from '../dialogs/confirmationDialog';
 
 import './projects.scss';
 
@@ -14,6 +15,7 @@ export default class Projects extends Component {
         projectCounter: 0,
         projectImageCounter: 0,
         displayDownloadHelp: true,
+        dialogProjectLoadDelayIsOpen: false,
     }
 
     handlePreviousProject = () => {
@@ -36,20 +38,35 @@ export default class Projects extends Component {
 
     handleNextProjectImage = () => {
         if ((this.state.projectImageCounter + 1) < PROJECT_DATA[this.state.projectCounter].images.length) {
-            this.setState(prevState => ({projectImageCounter: prevState.projectImageCounter + 1}))
+            this.setState(prevState => ({ projectImageCounter: prevState.projectImageCounter + 1 }));
         }
     }
 
+    handleProjectLoadDelayClose = (appURL) => {
+        // If the dialog displaying the load delay message is open, then close the dialog and open the app in a new window
+        this.viewApp(appURL);
+        this.setState({ dialogProjectLoadDelayIsOpen: false });
+    }
+    
+    handleViewApp = (issueLoadDelayWarning, appURL) => {
+        // If applicable issue a warning saying that it might take a bit of time to load the app
+        if (issueLoadDelayWarning) {
+            this.setState({ dialogProjectLoadDelayIsOpen: true });      // Open the dialog to display the load delay message
+        } else {
+            this.viewApp(appURL);
+        }
+    }
+
+    viewApp = (appURL) => {
+        window.open(appURL, "_blank");          // Open the app in a new browser window
+    }
+    
     getImageStyle() {
         return {
             backgroundImage: `url(${ PROJECT_DATA[this.state.projectCounter].images[this.state.projectImageCounter] })`,
         }
     }
-
-    handleViewApp = (source) => {
-        window.open(source, "_blank");
-    }
-
+    
     componentDidMount() {
         this.interval = setTimeout(() => this.setState({displayDownloadHelp: false}), 2000);
     }
@@ -63,6 +80,7 @@ export default class Projects extends Component {
 
         const { projectCounter, projectImageCounter, displayDownloadHelp } = this.state;
         const project = PROJECT_DATA[projectCounter];
+        debugger;
 
         return(
 
@@ -87,6 +105,8 @@ export default class Projects extends Component {
                                     handleNextProject = {this.handleNextProject}
                                     handlePreviousProject = {this.handlePreviousProject}
                                     displayDownloadHelp={displayDownloadHelp}
+                                    projectLoadDelay={this.handleViewApp}
+                                    issueLoadTimeWarning={project.issueLoadTimeWarning ? project.issueLoadTimeWarning : false }
                                 />
 
                             </section>
@@ -108,6 +128,9 @@ export default class Projects extends Component {
                         </div>            
 
                     </div>
+
+                    <ConfirmationDialog message={PROJECT_LOAD_DELAY_MESSAGE} open={this.state.dialogProjectLoadDelayIsOpen} onClose={this.handleProjectLoadDelayClose.bind(this, project.app)} />
+
                 </div>
 
             </Fragment>

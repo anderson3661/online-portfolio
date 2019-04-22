@@ -106,7 +106,7 @@
                 
                 li {
                     font-size: 100%;
-                    display: flex;
+                    @include flex($justify-content: null, $align-items: null);
 
                     &:before {
                         content: '~';
@@ -131,8 +131,7 @@
     .container.skills {
         overflow: auto;
         section.skills {
-            display: flex;
-            flex-direction: column;
+            @include flex($justify-content: null, $align-items: null, $flex-direction: column);
             margin-top: 12vh;
             .details {
                 position: relative;

@@ -1,12 +1,12 @@
 @import '../../sass/variables.scss';
+@import '../../sass/mixins.scss';
 
 
 nav.header {
     z-index: 9999;
     position: fixed;
     width: 100%;
-    display: flex;
-    justify-content: space-between;
+    @include flex($justify-content: space-between, $align-items: null);
 
     &.displayBackground {
         background-color: $background-color-header-on-scroll;
@@ -22,12 +22,11 @@ nav.header {
     }
 
     .mini-me {
-        flex-basis: 20%;
+        @include flex-basis(20%);
     }
     
     .sticky-notes {
-        flex-basis: 80%;
-        display: flex;
-        justify-content: flex-end;
+        @include flex-basis(80%);
+        @include flex($justify-content: flex-end, $align-items: null);
     }
 }

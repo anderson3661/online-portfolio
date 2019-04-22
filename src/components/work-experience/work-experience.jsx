@@ -1,75 +1,85 @@
-import React, { Fragment } from 'react';
+import React, { Component, Fragment } from 'react';
 import ReactHtmlParser from 'react-html-parser';
 
 import Header from '../nav/header';
 import { dataTextContent } from '../../utilities/constants-text-content';
+import * as helpers from '../../utilities/helpers';
 
 import './work-experience.scss';
 
 
-export default props => (
+export default class WorkExperience extends Component {
 
-    props.cv ?
+    componentDidMount() {
+        helpers.goToTopOfPage();
+    }
 
-        <div className="container work-experience-cv">
+    render() {
 
-            <h1>{dataTextContent.workExperience.title}</h1>
+        return (
 
-            { dataTextContent.workExperience.roles.map((workAssignment, i) => {
-                return (
-                    <Fragment key={i}>
-                        {!workAssignment.hideCompanyOnCV && <p className="companyOnCV">{workAssignment.company}</p>}
-                        <div className="role-and-dates">
-                            <p className={`role ${workAssignment.hideCompanyOnCV ? "highlightAsCompanyOnCV" : ""}`}>{workAssignment.role}</p>
-                            <p className="dates">{workAssignment.dates}</p>
-                        </div>
-                        { workAssignment.activities && workAssignment.activities.map((topic, j) => <p key={j} className="first-paragraph">{topic}</p>) }
-                        { workAssignment.activitiesHTML && ReactHtmlParser(workAssignment.activitiesHTML) }
-                    </Fragment>
-                )
-            })}
+            this.props.cv ?
 
-        </div>
+                <div className="container work-experience-cv">
 
-    :
+                    <h1>{dataTextContent.workExperience.title}</h1>
 
-        <Fragment>
+                    { dataTextContent.workExperience.roles.map((workAssignment, i) => {
+                        return (
+                            <Fragment key={i}>
+                                {!workAssignment.hideCompanyOnCV && <p className="companyOnCV">{workAssignment.company}</p>}
+                                <div className="role-and-dates">
+                                    <p className={`role ${workAssignment.hideCompanyOnCV ? "highlightAsCompanyOnCV" : ""}`}>{workAssignment.role}</p>
+                                    <p className="dates">{workAssignment.dates}</p>
+                                </div>
+                                { workAssignment.activities && workAssignment.activities.map((topic, j) => <p key={j} className="first-paragraph">{topic}</p>) }
+                                { workAssignment.activitiesHTML && ReactHtmlParser(workAssignment.activitiesHTML) }
+                            </Fragment>
+                        )
+                    })}
 
-            <Header />
-            
-            <div className="container work-experience">
+                </div>
 
-                <img className="full-screen-background-image" alt=""></img>
+            :
 
-                <section className="work-experience">
+                <Fragment>
 
-                    <div className="paper">
+                    <Header />
+                    
+                    <div className="container work-experience">
 
-                        <h1>{dataTextContent.workExperience.title}</h1>
+                        <img className="full-screen-background-image" alt=""></img>
 
-                        <ul>
-                            { dataTextContent.workExperience.roles.map((workAssignment, i) => {
-                                return (
-                                    <li key={i}>
-                                        <span></span>
-                                        <div className="job">
-                                            <div className="role">{workAssignment.role}</div>
-                                            <div className="company">{workAssignment.company}</div>
-                                            <div className="info">
-                                                { workAssignment.activities && workAssignment.activities.map((topic, j) => <p key={j}>{topic}</p>) }
-                                                { workAssignment.activitiesHTML && ReactHtmlParser(workAssignment.activitiesHTML) }
-                                            </div>
-                                        </div>
-                                        <div className="dates">
-                                            <span>{workAssignment.dates}</span>
-                                        </div>
-                                    </li>
-                                )
-                            })}
-                        </ul>
+                        <section className="work-experience">
+
+                            <div className="paper">
+
+                                <h1>{dataTextContent.workExperience.title}</h1>
+
+                                <ul>
+                                    { dataTextContent.workExperience.roles.map((workAssignment, i) => {
+                                        return (
+                                            <li key={i}>
+                                                <span></span>
+                                                <div className="job">
+                                                    <div className="role">{workAssignment.role}</div>
+                                                    <div className="company">{workAssignment.company}</div>
+                                                    <div className="info">
+                                                        { workAssignment.activities && workAssignment.activities.map((topic, j) => <p key={j}>{topic}</p>) }
+                                                        { workAssignment.activitiesHTML && ReactHtmlParser(workAssignment.activitiesHTML) }
+                                                    </div>
+                                                </div>
+                                                <div className="dates">
+                                                    <span>{workAssignment.dates}</span>
+                                                </div>
+                                            </li>
+                                        )
+                                    })}
+                                </ul>
+                            </div>
+                        </section>
                     </div>
-                </section>
-            </div>
-        </Fragment>
-   
-)
+                </Fragment>
+        );
+    }
+}

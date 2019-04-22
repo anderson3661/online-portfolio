@@ -41,9 +41,9 @@
                 padding: 2.5vh 2vw;
                 @include flex($align-items: null, $flex-direction: column);
 
-                .project-header { flex-basis: 10%; }
-                .project-body { flex: 1 }
-                .project-footer { flex-basis: 25%; }
+                .project-header { @include flex-basis(10%); }
+                .project-body { @include flex-flex(1); }
+                .project-footer { @include flex-basis(25%); }
 
                 .project-header {
                     @include flex($justify-content: null);
@@ -62,7 +62,7 @@
                     h2 {
                         font-size: 100%;
                         margin: 0 1vw;
-                        flex: 1;
+                        @include flex-flex(1);
                         text-align: center;
                         max-height: 33px;
                         overflow: hidden;
@@ -83,8 +83,7 @@
                     .skills {
                         
                         .skill {
-                            display: flex;
-                            align-items: baseline;
+                            @include flex($justify-content: null, $align-items: baseline);
                             
                             span {
                                 font-size: 70%;
@@ -105,29 +104,29 @@
                         margin-right: 0.5vw;
                         @include flex($align-items: null, $flex-direction: column);
         
-                        a {
+                        a, .button {
                             height: 4vh;
                             width: 9vw;
                             min-height: 30px;
                             min-width: 100px;
-                            display: flex;
+                            @include flex($justify-content: null, $align-items: null);
+                        }
 
-                            .button {
-                                width: 95%;             // This gives it the scale effect
-                                border: 1px solid transparent;
+                        a.button, .button {
+                            width: 95%;             // This gives it the scale effect
+                            border: 1px solid transparent;
 
-                                &.view-app {
-                                    @include backgroundImage($url: $background-image-projects-view-app, $size: contain);
-                                }
+                            &.view-app {
+                                @include backgroundImage($url: $background-image-projects-view-app, $size: contain);
+                            }
 
-                                &.view-code {
-                                    @include backgroundImage($url: $background-image-projects-view-code, $size: contain);
-                                }
+                            &.view-code {
+                                @include backgroundImage($url: $background-image-projects-view-code, $size: contain);
                             }
                         }
                         
                         .button.view-app:hover, .button.view-code:hover {
-                            padding: 0 1vw;             // This gives it the scale effect
+                            padding: 0 0.25vw;             // This gives it the scale effect
                             border: $border-projects-view-app-code-hover;
                         }
 
@@ -182,7 +181,7 @@
             }
         }
 
-        .project.previous, .project.next, .project-image.previous, .project-image.next { display: flex; align-items: flex-end; }
+        .project.previous, .project.next, .project-image.previous, .project-image.next { @include flex($justify-content: null, $align-items: flex-end) };
 
         .project.previous button, .project-image.previous button {
             border-left: $size-border-arrows solid transparent;

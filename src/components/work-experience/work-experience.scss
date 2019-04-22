@@ -93,22 +93,22 @@
                 }
 
                 .job {
-                    display: flex;
+                    @include flex($justify-content: null, $align-items: null);
 
                     .role {
-                        flex-basis: 20%;
+                        @include flex-basis(20%);
                         font-weight: 700;
                         margin-right: 2vw;
                     }
 
                     .company {
-                        flex-basis: 15%;
+                        @include flex-basis(15%);
                         font-weight: 700;
                         margin-right: 2vw;
                     }
                     
                     .info {
-                        flex-basis: 65%;
+                        @include flex-basis(65%);
                         // font-size: 0.9em;
                         // font-size: 75%;
 

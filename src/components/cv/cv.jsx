@@ -5,9 +5,10 @@ import Skills from '../skills/skills';
 import WorkExperience from '../work-experience/work-experience';
 import Education from '../education/education';
 import Training from '../training/training';
+import * as helpers from '../../utilities/helpers';
 
 import { dataTextContent } from '../../utilities/constants-text-content';
-import { CV_HREF_DOWNLOAD, CV_HREF_EMAIL, CV_HREF_LINKEDIN, CV_HREF_CV, CV_TEXT_EMAIL, CV_TEXT_LINKEDIN, CV_TEXT_CV, CV_IMAGE_EMAIL, CV_IMAGE_LINKEDIN, CV_IMAGE_GITHUB } from '../../utilities/constants';
+import { CV_HREF_DOWNLOAD, CV_HREF_EMAIL, CV_HREF_CV, CV_TEXT_EMAIL, CV_TEXT_CV, CV_IMAGE_EMAIL, CV_IMAGE_GITHUB } from '../../utilities/constants';
 
 import './cv.scss';
 
@@ -19,7 +20,8 @@ export default class CV extends Component {
     }
 
     componentDidMount() {
-        this.interval = setTimeout(() => this.setState({displayDownloadHelp: false}), 2000)
+        this.interval = setTimeout(() => this.setState({displayDownloadHelp: false}), 2000);
+        helpers.goToTopOfPage();
     }
 
     componentWillUnmount() {
@@ -55,10 +57,10 @@ export default class CV extends Component {
                                         <img src={CV_IMAGE_EMAIL} alt="" />
                                         <a href={CV_HREF_EMAIL} target="_blank" rel="noopener noreferrer">{CV_TEXT_EMAIL}</a>
                                     </div>
-                                    <div className="image">
+                                    {/* <div className="image">
                                         <img src={CV_IMAGE_LINKEDIN} alt="" />
                                         <a href={CV_HREF_LINKEDIN} target="_blank" rel="noopener noreferrer">{CV_TEXT_LINKEDIN}</a>
-                                    </div>
+                                    </div> */}
                                     <div className="image">
                                         <img src={CV_IMAGE_GITHUB} alt="" />
                                         <a href={CV_HREF_CV} target="_blank" rel="noopener noreferrer">{CV_TEXT_CV}</a>
